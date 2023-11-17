@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+  <body onload="getNotification(); CountDownTimer();" class="">
+    <div class="wrapper">
+
+      <script type="text/javascript">
+        //document.onkeydown = function(e) 
+        //  {
+        //    if(e.ctrlKey && e.keyCode==84) /* ctrl + T */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.shiftKey && e.keyCode == 84) /* ctrl + shift + T */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.keyCode==123) /* f12 */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode==78) /* ctrl + N */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode==80) /* ctrl + P */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode==83) /* ctrl + s */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode==79) /* ctrl + o */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode==72) /* ctrl + H */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode==74) /* ctrl + J */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode==107) /* ctrl +  */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode==109) /* ctrl - */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.shiftKey && e.keyCode == 46) /* ctrl + shift + del */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.shiftKey && e.keyCode == 78) /* ctrl + shift + N */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode == 87) /* ctrl + W */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode == 27) /* ctrl + Esc */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.shiftKey && e.keyCode == 74) /* ctrl + shift + J */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) /* ctrl + shift + i */
+        //    {
+        //        return false;
+        //    }
+        //    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) /* ctrl + u */
+        //    {
+        //        return false;
+        //    }    
+        //  }
+        //  window.oncontextmenu = function () {
+        //    return false;
+        //}
+        //document.onmousedown= function (e) {
+        //    if(e.which===2) /* mouse middle click */
+        //     {
+        //      alert("Sorry. Invalid click")
+        //     }
+        //}
+      </script>
+
+
+
+      <nav class="navbar navbar-default mainmenu">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#item-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" title="CoreMicron Information System" style="color: blue;">CMIS</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse " id="item-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HOME <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.coremicron.com/demo/home.php" class="top-menu-dropdown-link">Dashboard</a></li>
+                  <li class="in-dropdown"><a href="http://www.coremicron.com/demo/reminder.php" class="top-menu-dropdown-link">Reminder</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SALES <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.coremicron.com/demo/new-billing.php" class="top-menu-dropdown-link">New Billing</a></li>
+                  <li><a href="http://www.coremicron.com/demo/sales.php" class="top-menu-dropdown-link">Invoices</a></li>
+                  <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle top-menu-dropdown-link"> Sales Return / Credit Note
+                      <span style="padding-left: 20px;">
+                        <i class="fa fa-caret-right"></i></span></a>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.coremicron.com/demo/generate-credit-note-item-wise.php" class="top-menu-dropdown-link">Generate <span style="color:blue">Item Wise</span> Credit Note </a></li>
+                      <li><a href="http://www.coremicron.com/demo/generate-credit-note-without-item.php" class="top-menu-dropdown-link">Generate Credit Note <span style="color:blue">W/o Item</span></a></li>
+                      <li><a href="http://www.coremicron.com/demo/sales-return.php" class="top-menu-dropdown-link">Sales Return / Credit Note</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ORDER <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.coremicron.com/demo/new-order.php" class="top-menu-dropdown-link">New Order</a></li>
+                  <li><a href="http://www.coremicron.com/demo/order.php" class="top-menu-dropdown-link">Order</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Transactions <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.coremicron.com/demo/receipts.php" class="top-menu-dropdown-link">Receipts</a></li>
+                  <li><a href="http://www.coremicron.com/demo/payments.php" class="top-menu-dropdown-link">Payments</a></li>
+                  <li><a href="http://www.coremicron.com/demo/cheques.php" class="top-menu-dropdown-link">Received / Given Cheques</a></li>
+                  <li><a href="http://www.coremicron.com/demo/discounts.php" class="top-menu-dropdown-link">Discount</a></li>
+                  <li><a href="http://www.coremicron.com/demo/indirect-incomes.php" class="top-menu-dropdown-link">Indirect Income</a></li>
+                  <li><a href="http://www.coremicron.com/demo/indirect-expenses.php" class="top-menu-dropdown-link">Indirect Expense</a></li>
+                  <li><a href="http://www.coremicron.com/demo/wallet.php" class="top-menu-dropdown-link">Wallet</a></li>
+                  <li><a href="http://www.coremicron.com/demo/amount-transfer.php" class="top-menu-dropdown-link">Amount Transfer</a></li>
+                  <li><a href="http://www.coremicron.com/demo/all-transactions.php" class="top-menu-dropdown-link">All Transactions</a></li>
+                  <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle top-menu-dropdown-link" style="color: blue!important;"> Verification
+                      <span style="padding-left: 20px;">
+                        <i class="fa fa-caret-right"></i></span></a>
+
+                    <ul class="dropdown-menu">
+
+                      <li><a href="http://www.coremicron.com/demo/verification-pending-receipt-discount.php" class="top-menu-dropdown-link">Pending Receipts &amp; Discount Allowed</a></li>
+
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Purchase <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.coremicron.com/demo/add-purchase.php" class="top-menu-dropdown-link">Add Purchase</a></li>
+                  <li><a href="http://www.coremicron.com/demo/purchase.php" class="top-menu-dropdown-link">Purchases</a></li>
+                  <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle top-menu-dropdown-link"> Purchase Return / Debit Note
+                      <span style="padding-left: 20px;">
+                        <i class="fa fa-caret-right"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.coremicron.com/demo/generate-debit-note-item-wise.php" class="top-menu-dropdown-link">Generate <span style="color:blue">Item Wise</span> Debit Note </a></li>
+                      <li><a href="http://www.coremicron.com/demo/generate-debit-note-without-item.php" class="top-menu-dropdown-link">Generate Debit Note <span style="color:blue">W/o Item</span></a></li>
+                      <li><a href="http://www.coremicron.com/demo/purchase-return.php" class="top-menu-dropdown-link">Purchase Return / Debit Note</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stock <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle top-menu-dropdown-link"> Stock
+                      <span style="padding-left: 20px;">
+                        <i class="fa fa-caret-right"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.coremicron.com/demo/stock.php" class="top-menu-dropdown-link">Stock View</a></li>
+                      <li><a href="http://www.coremicron.com/demo/group-wise-product-stock.php" class="top-menu-dropdown-link">Group Wise Product Stock</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="http://www.coremicron.com/demo/selling-rate.php" class="top-menu-dropdown-link">Selling Rate</a></li>
+                  <li><a href="http://www.coremicron.com/demo/damaged-goods.php" class="top-menu-dropdown-link">Damaged Goods</a></li>
+                  <li><a href="http://www.coremicron.com/demo/assets.php" class="top-menu-dropdown-link">Assets</a></li>
+                  <li><a href="http://www.coremicron.com/demo/expiry-stocks.php" class="top-menu-dropdown-link">
+                      Expiry Stocks</a></li>
+                  <li><a href="http://www.coremicron.com/demo/minimum-stock-level-details.php" class="top-menu-dropdown-link" style="color: red!important;">
+                      Product Minimum Stock</a></li>
+                  <li><a href="http://www.coremicron.com/demo/barcode-print.php" class="top-menu-dropdown-link" style="color: blue!important;">Barcode Print</a></li>
+                </ul>
+              </li>
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Expense <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+
+                  <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle top-menu-dropdown-link"> New Expense <span style="color: orangered;">(Voucher)</span>
+                      <span style="padding-left: 20px;">
+                        <i class="fa fa-caret-right"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.coremicron.com/demo/new-single-expense-voucher.php" class="top-menu-dropdown-link">
+                          Single Item On Voucher</a></li>
+                      <li><a href="http://www.coremicron.com/demo/new-multi-expense-voucher.php" class="top-menu-dropdown-link">
+                          Multiple Items On Voucher</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="http://www.coremicron.com/demo/expenses.php" class="top-menu-dropdown-link">Expenses</a></li>
+                  <li><a href="http://www.coremicron.com/demo/expenses-category.php" class="top-menu-dropdown-link">Expense Category</a></li>
+                </ul>
+              </li>
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registration <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+
+                  <li><a href="http://www.coremicron.com/demo/user.php" class="top-menu-dropdown-link">user</a></li>
+
+                  <li><a href="http://www.coremicron.com/demo/capital-account.php" class="top-menu-dropdown-link">Capital Account</a></li>
+
+                  <li><a href="http://www.coremicron.com/demo/customers.php" class="top-menu-dropdown-link">Customer</a></li>
+                  <li><a href="http://www.coremicron.com/demo/employees.php" class="top-menu-dropdown-link">Employees</a></li>
+                  <li><a href="http://www.coremicron.com/demo/expenses-category.php" class="top-menu-dropdown-link">Expense Category</a></li>
+                  <li><a href="http://www.coremicron.com/demo/loan.php" class="top-menu-dropdown-link">Loan</a></li>
+                  <li><a href="http://www.coremicron.com/demo/products.php" class="top-menu-dropdown-link">Product</a></li>
+                  <li><a href="http://www.coremicron.com/demo/product-groups.php" class="top-menu-dropdown-link">Product Group</a></li>
+
+                  <li><a href="http://www.coremicron.com/demo/sales-executives.php" class="top-menu-dropdown-link">Sales Executives</a></li>
+
+                  <li><a href="http://www.coremicron.com/demo/suppliers.php" class="top-menu-dropdown-link">Supplier</a></li>
+
+                  <li><a href="http://www.coremicron.com/demo/type-of-charges.php" class="top-menu-dropdown-link">Type of Charges</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Worksites <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.coremicron.com/demo/worksites.php" class="top-menu-dropdown-link">Worksites</a></li>
+                  <li><a href="http://www.coremicron.com/demo/item-add-to-worksite.php" class="top-menu-dropdown-link">Item add to worksites</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quotation <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.coremicron.com/demo/new-quotation.php" class="top-menu-dropdown-link">New Quotation</a></li>
+                  <li><a href="http://www.coremicron.com/demo/quotation.php" class="top-menu-dropdown-link">Quotation</a></li>
+                </ul>
+              </li>
+              <li class="dropdown top-menu-link-divider">
+                <a href="#" class="dropdown-toggle top-menu-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle top-menu-dropdown-link"> Aged Receivable Reports
+                      <span style="padding-left: 60px;">
+                        <i class="fa fa-caret-right"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.coremicron.com/demo/aged-receivable-reports.php" class="top-menu-dropdown-link">All Customer</a></li>
+                      <li><a href="http://www.coremicron.com/demo/aged-receivable-sales-executive-wise-reports.php" class="top-menu-dropdown-link">Sales Executive Wise</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="http://www.coremicron.com/demo/all-report.php" class="top-menu-dropdown-link">All Report</a></li>
+                  <li><a href="http://www.coremicron.com/demo/assets.php" class="top-menu-dropdown-link">Assets</a></li>
+                  <li><a href="http://www.coremicron.com/demo/balance-sheet.php" class="top-menu-dropdown-link">Balance Sheet</a></li>
+                  <li><a href="http://www.coremicron.com/demo/creditors.php" class="top-menu-dropdown-link">Creditors</a></li>
+                  <li><a href="http://www.coremicron.com/demo/day-book.php" class="top-menu-dropdown-link">Day Book</a></li>
+                  <li><a href="http://www.coremicron.com/demo/debitors.php" class="top-menu-dropdown-link">Debitors</a></li>
+                  <li><a href="http://www.coremicron.com/demo/double-column-cash-book.php" class="top-menu-dropdown-link">Double Column Cash Book</a></li>
+                  <li><a href="http://www.coremicron.com/demo/expense-category-report.php" class="top-menu-dropdown-link">Expense Category Report</a></li>
+                  <li><a href="http://www.coremicron.com/demo/gst-filing.php" class="top-menu-dropdown-link">GST Filing</a></li>
+                  <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle top-menu-dropdown-link"> Ledger
+                      <span style="padding-left: 60px;">
+                        <i class="fa fa-caret-right"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.coremicron.com/demo/account-ledger.php" class="top-menu-dropdown-link">Account Ledger</a></li>
+                      <li><a href="http://www.coremicron.com/demo/product-ledger.php" class="top-menu-dropdown-link">Product/Asset Ledger</a></li>
+                      <li><a href="http://www.coremicron.com/demo/wallet-ledger.php" class="top-menu-dropdown-link">Wallet Ledger</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="http://www.coremicron.com/demo/product-group-wise-report.php" class="top-menu-dropdown-link">Product Group Wise Report</a></li>
+                  <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle top-menu-dropdown-link"> Profit &amp; Loss
+                      <span style="padding-left: 60px;">
+                        <i class="fa fa-caret-right"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.coremicron.com/demo/profit-loss-account.php" class="top-menu-dropdown-link">Financial Year Report</a></li>
+                      <li><a href="http://www.coremicron.com/demo/date-wise-profit-loss-account.php" class="top-menu-dropdown-link">Date Wise Profit &amp; Loss Report</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="http://www.coremicron.com/demo/sales-executive-wise-report.php" class="top-menu-dropdown-link">Sales Executive wise Report</a></li>
+                  <li><a href="http://www.coremicron.com/demo/track-product-information.php" class="top-menu-dropdown-link">Track Product Information</a></li>
+                  <li><a href="http://www.coremicron.com/demo/type-of-charge-report.php" class="top-menu-dropdown-link">Type of Charges Report</a></li>
+                  <li><a href="http://www.coremicron.com/demo/user-activity-report.php" class="top-menu-dropdown-link">User Activity Report</a></li>
+
+                  <li><a href="http://www.coremicron.com/demo/worksite-report.php" class="top-menu-dropdown-link">Worksite Report</a></li>
+                </ul>
+              </li>
+
+              <li class="top-menu-link-divider"><a href="http://www.coremicron.com/demo/logout.php" class="top-menu-link">Logout </a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+
+                <div style="color: blue;padding-top:15px;font-weight: bold;">Version 2.2</div>
+
+
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div class="paddingtop50">
+
+
+        <section class="content-header">
+          <h1 class="item-title text-center">
+            Dashboard
+
+          </h1>
+
+        </section>
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box box-shadow">
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="box box-info">
+                      <div class="box-header">
+                        <i class="fa fa-hand-o-down"></i>
+                        <h3 class="box-title">Quick links</h3>
+
+                      </div>
+
+                      <div class="box-body">
+                        <div class="row">
+                          <div class="col-md-3" style="margin-bottom: 10px;"><a href="double-column-cash-book.php" class="btn btn-block btn-success"> Double Column Cash Book </a></div>
+                          <div class="col-md-3" style="margin-bottom: 10px;">
+                            <a href="new-billing.php" class="btn btn-block btn-success">New Billing</a>
+                          </div>
+                          <div class="col-md-3" style="margin-bottom: 10px;">
+                            <a href="add-purchase.php" class="btn btn-block btn-success">Add Purchase</a>
+                          </div>
+                          <div class="col-md-3" style="margin-bottom: 10px;">
+                            <a href="new-single-expense-voucher.php" class="btn btn-block btn-success">New Expenses</a>
+                          </div>
+                          <div class="col-md-3" style="margin-bottom: 10px;">
+                            <a href="receipts.php" class="btn btn-block btn-success">Receipts</a>
+                          </div>
+                          <div class="col-md-3" style="margin-bottom: 10px;">
+                            <a href="payments.php" class="btn btn-block btn-success">Payments</a>
+                          </div>
+                          <div class="col-md-3" style="margin-bottom: 10px;"><a href="all-report.php?id=sales" class="btn btn-block btn-success"> Sales Report</a></div>
+                          <div class="col-md-3" style="margin-bottom: 10px;"><a href="all-report.php?id=purchase" class="btn btn-block btn-success"> Purchase Report</a></div>
+                          <div class="col-md-3" style="margin-bottom: 10px;"><a href="all-report.php?id=expense" class="btn btn-block btn-success"> Expense Report</a></div>
+                          <div class="col-md-3" style="margin-bottom: 10px;"><a href="account-ledger.php" class="btn btn-block btn-success"> Customer Ledger</a></div>
+                          <div class="col-md-3" style="margin-bottom: 10px;"><a href="account-ledger.php" class="btn btn-block btn-success"> Supplier Ledger</a></div>
+                          <div class="col-md-3" style="margin-bottom: 10px;"><a href="wallet-ledger.php" class="btn btn-block btn-success"> Wallet Ledger</a></div>
+                          <div id="homepagedata"></div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="box box-info">
+
+                      <div class="box-body">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <div class="table-responsive">
+                              <table class="table table-bordered table-striped inv-border" width="100%">
+                                <thead>
+                                  <tr>
+                                    <th width="5%" class="text-center">SI.No</th>
+                                    <th width="12%" class="text-center">Invoice Date</th>
+                                    <th width="17%">Customer Name</th>
+                                    <th width="12%" class="text-center">Invoice No</th>
+                                    <th class="text-right" width="13%">Total Amount</th>
+                                    <th id="not-print" class="text-center" width="12%">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">11/06/2023</td>
+                                    <td>Ac Machanic</td>
+                                    <td class="text-center">1/23-24</td>
+                                    <td class="text-right">206.50</td>
+                                    <td id="not-print" class="text-center">
+                                      <a href="#" onclick="POPUPWindow('popup-invoice-details.php?id=766423755&amp;invno=OA--','','');">
+                                        <button class="btn-clr" style="font-size: 12px;"><i class="fa fa-print"></i> Invoice</button>
+                                      </a>
+
+
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+
+                          <div class="col-md-4">
+                            <div class="box-header with-border">
+                              <h3 class="box-title">Wallet Amount</h3>
+                            </div>
+
+                            <div class="table-responsive">
+                              <table class="table no-margin" width="100%">
+                                <thead>
+                                  <tr>
+                                    <th width="60%">Wallet Name</th>
+                                    <th width="40%" style="text-align: right;">Balance Amount</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <td style="font-weight: bold;">Cash</td>
+                                    <td style="text-align: right;font-weight: bold;">211.00 Dr</td>
+
+                                  </tr>
+                                  <tr>
+                                    <td style="font-weight: bold;">Bank</td>
+                                    <td style="text-align: right;font-weight: bold;">2,734,882.00 Dr</td>
+
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>&nbsp;</div>
+
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /.content-wrapper -->
+
+
+
+
+      <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+      <!-- Bootstrap 3.3.5 -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/js/jquery-ui.js"></script>
+      <script>
+        $('a').click(function(e) {
+          if (e.ctrlKey) {
+            return false;
+          }
+          if (e.shiftKey) {
+            return false;
+          }
+
+        });
+        (function($) {
+          $(document).ready(function() {
+            $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+              event.preventDefault();
+              event.stopPropagation();
+              $(this).parent().siblings().removeClass('open');
+              $(this).parent().toggleClass('open');
+            });
+          });
+        })(jQuery);
+      </script>
+
+      <style>
+        .fixed-bottom {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+
+        @media (max-width: 767px) {
+          .fixed-bottom {
+            position: relative;
+          }
+        }
+
+        .countdown {
+
+          width: 22vw;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+
+        }
+
+        .num {
+          color: red;
+          text-shadow: 1px 1px 21px white, 0 0 25px white, 0 0 5px red;
+          font-size: 11px;
+        }
+
+        .text {
+          color: red;
+          text-shadow: 1px 1px 21px white, 0 0 25px white, 0 0 5px red;
+          font-size: 10px;
+        }
+      </style>
+
+      <li>
+
+      </li>
+
+      <div class="fixed-bottom">
+
+        <div class="table-action" id="not-print" style="float: right; padding-right: 50px;">
+
+          <ul>
+            <li>
+              <a href="#" onclick="PopUpURL('new-data-finacialyear.php');">
+                <button class="btn-clr" style="height: 45px;border: 1px solid white;background: green;">
+                  2023 - 2024 </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="table-action" id="not-print" style="float: right; padding-right: 40px;">
+
+          <ul>
+            <li>
+              <button style="height: 45px;border: 1px solid white;background: skyblue; border-radius: 20px 20px 0px 0px;" >
+                <div class="countdown">
+
+                  <div class="box">
+                    <span class="" style="color: black; font-size: 11px;">Your app expires on<b>:</b></span>
+                  </div>
+                  <div class="box">
+                    <span class="num" id="day-box">00</span>
+                    <span class="text">Days</span>
+                  </div>
+                  <div class="box">
+                    <span class="num" id="hr-box">00</span>
+                    <span class="text">Hours</span>
+                  </div>
+                  <div class="box">
+                    <span class="num" id="min-box">00</span>
+                    <span class="text">Minutes</span>
+                  </div>
+                  <div class="box">
+                    <span class="num" id="sec-box">00</span>
+                    <span class="text">Seconds</span>
+                  </div>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Modal  Details Starts -->
+      <div class="modal fade" id="custPopUp" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog"><!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">×</button>
+              <h4 class="modal-title clr-white">Choose Financial Year</h4>
+            </div>
+            <div class="modal-body">
+              <div id="popupresultdata"></div>
+              <div id="popuploader" class="loader-cls"></div>
+
+              <form name="finCurrForm" id="finCurrForm" method="post" class="form-horizontal" enctype="multipart/form-data" autocomplete="off" onsubmit="return RunningFinancialYearForm();">
+
+
+                <div class="row paddingtop12">
+                  <div class="col-md-4">
+                    Financial Year :
+                  </div>
+
+                  <div class="col-md-8">
+                    <select name="runn_finyr" id="runn_finyr" class="form-control" tabindex="1">
+                      <option value="">Choose financial year</option>
+                      <option value="2" selected="selected">
+                        2023 - 2024</option>
+                      <option value="1">
+                        2022 - 2023</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row paddingtop12 ">
+                  <div class="col-md-4">
+                    &nbsp;
+                  </div>
+
+                  <div class="col-md-8">
+                    <div id="err_popupdiv" class="error"></div>
+                    <input type="submit" class="btn btn-clr" name="UpdRunFin" value="Save" id="finbtn">
+                  </div>
+
+
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+
+
+          <script>
+            function RunningFinancialYearForm() {
+
+              var form_data = new FormData(document.getElementById("finCurrForm"));
+              form_data.append("label", "WEBUPLOAD");
+
+              document.getElementById("finbtn").disabled = true;
+
+              $.ajax({
+                url: "action/financialyear_action.php?action=RunningFinancialYear",
+                type: "POST",
+                data: form_data,
+                beforeSend: function(data) {
+                  $("#popuploader").html('<img src="images/ajax-loader.gif">');
+                },
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                  var Splititem = data.split('--AGNI2--');
+                  var dis = Splititem[0];
+                  var msg = Splititem[1];
+
+
+                  $("#popupresultdata").html(dis);
+                  $('#popuploader').html('');
+                  document.getElementById("runn_finyr").focus();
+                  document.getElementById("finbtn").disabled = false;
+                  if (msg == "succ") {
+                    setTimeout("$('#custPopUp').modal('hide');", 500);
+                    location.reload();
+                  } else {
+
+                  }
+
+                }
+              });
+              return false;
+            }
+          </script>
+
+        </div>
+      </div>
+      <!-- Modal  Details Ends -->
+      <script src="assets/js/11_appscript.js"></script>
+      <script src="assets/js/1autocomplete.js"></script>
+      <script src="assets/js/3_validation.js"></script>
+    </div>
+
+    <script>
+      function getNotification() {
+        if (!Notification) {
+          $('body').append('<h4 style="color:red">*Browser does not support Web Notification</h4>');
+          return;
+        }
+
+        if (Notification.permission !== "granted") {
+          Notification.requestPermission();
+        } else {
+
+          $.ajax({
+            url: "notification.php",
+            type: "POST",
+            success: function(response, textStatus, jqXHR) {
+
+              var response = jQuery.parseJSON(response);
+
+              if (response.result == true) {
+                var notificationDetails = response.notif;
+                for (var i = notificationDetails.length - 1; i >= 0; i--) {
+                  var notificationUrl = notificationDetails[i]['url'];
+                  var notificationObj = new Notification(notificationDetails[i]['title'], {
+                    body: notificationDetails[i]['message'],
+                  });
+
+                  notificationObj.onclick = function() {
+                    window.open(notificationUrl);
+                    notificationObj.close();
+                  };
+                  setTimeout(function() {
+                    notificationObj.close();
+                  }, 5000);
+                };
+              } else {}
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+
+            }
+          });
+        }
+      }
+    </script>
+
+
+    <script>
+      function CountDownTimer() {
+
+
+        let dayBox = document.getElementById("day-box");
+        let hrBox = document.getElementById("hr-box");
+        let minBox = document.getElementById("min-box");
+        let secBox = document.getElementById("sec-box");
+        let endDate = new Date("2023-11-15");
+        let endTime = endDate.getTime();
+
+        function countdown() {
+          let todayDate = new Date();
+          let todayTime = todayDate.getTime();
+          let remainingTime = endTime - todayTime;
+          let oneMin = 60 * 1000;
+          let oneHr = 60 * oneMin;
+          let oneDay = 24 * oneHr;
+
+          let addZeroes = (num) => (num < 10 ? `0${num}` : num);
+
+          if(num == 0){
+            
+          }
+
+          if (endTime < todayTime) {
+            clearInterval(i);
+            document.querySelector(
+              ".countdown"
+            ).innerHTML = `<h4>Countdown Has Expired</h4>`;
+          } else {
+            let daysLeft = Math.floor(remainingTime / oneDay);
+            let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
+            let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
+            let secsLeft = Math.floor((remainingTime % oneMin) / 1000);
+
+            dayBox.textContent = addZeroes(daysLeft);
+            hrBox.textContent = addZeroes(hrsLeft);
+            minBox.textContent = addZeroes(minsLeft);
+            secBox.textContent = addZeroes(secsLeft);
+          }
+        }
+
+        let i = setInterval(countdown, 1000);
+        countdown();
+      }
+    </script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,8 @@
+.countdown {
+    justify-content: right;
+    width: 95vw;
+    display: flex;
+    gap: 10px;
+    
+   
+  }

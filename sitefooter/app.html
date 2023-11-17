@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count-down timer</title>
+</head>
+<body onload="CountDownTimer();" class="">
+  
+
+    
+      <style>
+        .fixed-bottom {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+
+        @media (max-width: 767px) {
+          .fixed-bottom {
+            position: relative;
+          }
+        }
+
+        .countdown {
+
+          width: 26vw;
+          display: flex;
+          gap: 10px;
+
+        }
+
+        .num {
+          color: red;
+          text-shadow: 1px 1px 21px white, 0 0 25px white, 0 0 5px red;
+        }
+
+        .text {
+          color: red;
+          text-shadow: 1px 1px 21px white, 0 0 25px white, 0 0 5px red;
+        }
+      </style>
+
+
+
+
+      <div class="fixed-bottom">
+        <div class="table-action" id="not-print" style="float: right; padding-right: 0px;">
+          <ul>
+            <li>
+            <!--  -->
+              <button style="height: 45px;border: 1px solid white;background: skyblue; border-radius: 20px;">
+                <div class="countdown">
+
+                    <!-- expires on text  -->
+                  <div class="box">
+                    <span class="" style="color: black;">Your app expires on<b>:</b></span>
+                  </div>
+
+                  <!-- days span-->
+                  <div class="box">
+                    <span class="num" id="day-box">00</span>
+                    <span class="text">Days</span>
+                  </div>
+
+                  <!-- Hours span-->
+                  <div class="box">
+                    <span class="num" id="hr-box">00</span>
+                    <span class="text">Hours</span>
+                  </div>
+
+                  <!-- Minutes span-->
+                  <div class="box">
+                    <span class="num" id="min-box">00</span>
+                    <span class="text">Minutes</span>
+                  </div>
+
+                  <!-- Seconds span-->
+                  <div class="box">
+                    <span class="num" id="sec-box">00</span>
+                    <span class="text">Seconds</span>
+                  </div>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Modal  Details Starts -->
+      <div class="modal fade" id="custPopUp" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog"><!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">×</button>
+              <h4 class="modal-title clr-white">Choose Financial Year</h4>
+            </div>
+            <div class="modal-body">
+              <div id="popupresultdata"></div>
+              <div id="popuploader" class="loader-cls"></div>
+
+              <form name="finCurrForm" id="finCurrForm" method="post" class="form-horizontal" enctype="multipart/form-data" autocomplete="off" onsubmit="return RunningFinancialYearForm();">
+
+
+                <div class="row paddingtop12">
+                  <div class="col-md-4">
+                    Financial Year :
+                  </div>
+
+                  <div class="col-md-8">
+                    <select name="runn_finyr" id="runn_finyr" class="form-control" tabindex="1">
+                      <option value="">Choose financial year</option>
+                      <option value="2" selected="selected">
+                        2023 - 2024</option>
+                      <option value="1">
+                        2022 - 2023</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row paddingtop12 ">
+                  <div class="col-md-4">
+                    &nbsp;
+                  </div>
+
+                  <div class="col-md-8">
+                    <div id="err_popupdiv" class="error"></div>
+                    <input type="submit" class="btn btn-clr" name="UpdRunFin" value="Save" id="finbtn">
+                  </div>
+
+
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+
+
+         
+
+        </div>
+      </div>
+
+    </div>
+
+   
+
+    <script>
+      function CountDownTimer() {
+
+
+        let dayBox = document.getElementById("day-box");
+        let hrBox = document.getElementById("hr-box");
+        let minBox = document.getElementById("min-box");
+        let secBox = document.getElementById("sec-box");
+        let endDate = new Date("2023-11-10");
+        let endTime = endDate.getTime();
+
+        function countdown() {
+          let todayDate = new Date();
+          let todayTime = todayDate.getTime();
+          let remainingTime = endTime - todayTime;
+          let oneMin = 60 * 1000;
+          let oneHr = 60 * oneMin;
+          let oneDay = 24 * oneHr;
+
+          let addZeroes = (num) => (num < 10 ? `0${num}` : num);
+
+          if (endTime < todayTime) {
+            clearInterval(i);
+            document.querySelector(
+              ".countdown"
+            ).innerHTML = `<h4>Countdown Has Expired</h4>`;
+          } else {
+            let daysLeft = Math.floor(remainingTime / oneDay);
+            let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
+            let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
+            let secsLeft = Math.floor((remainingTime % oneMin) / 1000);
+
+            dayBox.textContent = addZeroes(daysLeft);
+            hrBox.textContent = addZeroes(hrsLeft);
+            minBox.textContent = addZeroes(minsLeft);
+            secBox.textContent = addZeroes(secsLeft);
+          }
+        }
+
+        let i = setInterval(countdown, 1000);
+        countdown();
+      }
+    </script>
+
+
+  </body>
+</html>
